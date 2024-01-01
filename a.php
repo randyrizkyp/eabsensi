@@ -1,3 +1,3 @@
 <?php
-echo 'xxx';
+echo 'ttt';
 ?>
