@@ -1,3 +1,3 @@
 <?php
-echo 'sukses';
+echo 'sukses2';
 ?>
