@@ -1,3 +1,3 @@
 <?php
-echo 'sukses1';
+echo 'ccc';
 ?>
