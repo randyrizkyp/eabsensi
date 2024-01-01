@@ -1,3 +1,3 @@
 <?php
-echo 'www';
+echo 'fff';
 ?>
