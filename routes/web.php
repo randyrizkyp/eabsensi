@@ -39,6 +39,15 @@ Route::get('/queue', function(){
     return 'absen berhasil masuk';
 });
 
+Route::get('/storage/uploads/{tahun}/{bulan}/{file}', function ($tahun, $bulan, $file) {
+    $path = "uploads/$tahun/$bulan/$file";
+
+    if (!Storage::exists($path)) {
+        abort(404);
+    }
+
+    return response()->file(storage_path("app/$path"));
+});
 
 Route::get('/', function () {
     

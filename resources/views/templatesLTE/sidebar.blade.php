@@ -117,6 +117,54 @@
 
                     </ul>
                 </li>
+                <li class="nav-item {{ Request::is('shift*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ Request::is('shift*') ? 'active' : '' }}">
+                        <i class="nav-icon far fa-clock"></i>
+                        <p>
+                            Shifting
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/kepegawaian/pegawaiAsn"
+                                class="nav-link {{ Request::is('kepegawaian/pegawaiAsn*') ? 'active' : '' }}"
+                                style="font-size: .9rem">
+                                <i class="far fa-circle nav-icon ml-2" style="font-size: .7rem"></i>
+                                <p>Daftar ASN</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/kepegawaian/nonAsn"
+                                class="nav-link {{ Request::is('kepegawaian/nonAsn*') ? 'active' : '' }}"
+                                style="font-size: .9rem">
+                                <i class="far fa-circle nav-icon ml-2" style="font-size: .7rem"></i>
+                                <p>Daftar Non-ASN</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/kepegawaian/mutasiKeluar"
+                                class="nav-link {{ Request::is('kepegawaian/mutasiKeluar') ? 'active' : '' }}"
+                                style="font-size: .9rem">
+                                <i class="far fa-circle nav-icon ml-2" style="font-size: .7rem"></i>
+                                <p>Mutasi Keluar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/kepegawaian/mutasiMasuk"
+                                class="nav-link {{ Request::is('kepegawaian/mutasiMasuk') ? 'active' : '' }}"
+                                style="font-size: .9rem">
+                                <i class="far fa-circle nav-icon ml-2" style="font-size: .7rem"></i>
+                                <p>Mutasi Masuk</p>
+                                @if($notifMutasi->count())
+                                <span class="badge badge-warning right">{{ $notifMutasi->count() }}</span>
+                                @endif
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
                 <li class="nav-item {{ Request::is('rekapitulasi*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ Request::is('rekapitulasi*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-chalkboard"></i>

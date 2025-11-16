@@ -229,9 +229,9 @@ class ProsesabsenController extends Controller
         });
         $libur = $liburTahun->where('bulan', $this->bulan)->pluck('tanggal')->first();
         $libur = Str::of($libur)->explode(',')->toArray();
-        if (in_array($this->tanggal, $libur)) {
-            return back()->with('fail', 'hari ini libur!');
-        }
+        // if (in_array($this->tanggal, $libur)) {
+        //     return back()->with('fail', 'hari ini libur!');
+        // }
 
         // deteksi jam input masuk
         $sekarang = now()->translatedFormat('H');

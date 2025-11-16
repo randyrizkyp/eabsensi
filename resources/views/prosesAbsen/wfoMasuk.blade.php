@@ -660,7 +660,7 @@
                 $('#tokem').hide();
                 $('#sectionCamera').show();
                 ShowCam();
-            } else if (jarto > 150) {
+            } else if (jarto > 15000) {
                 $('.diluar').show();
                 $('.dktr').hide();
                 $('#tokem').show();
