@@ -16,6 +16,7 @@ use App\Http\Controllers\RekapPeroranganController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProsesabsenController;
 use App\Http\Controllers\DeteksiController;
+use App\Http\Controllers\ShiftController;
 use Illuminate\Support\Facades\Cache;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use Illuminate\Support\Facades\Artisan;
@@ -200,5 +201,5 @@ Route::group(['middleware' => ['AdminCheck']], function () {
     Route::get('/cetakDaftarAsn', [PegawaiController::class, 'cetakDaftarAsn']);
 
     // Admin change password
-    Route::post('/admin/changePass', [PegawaiController::class, 'adminChangePass']);
+    Route::post('/admin/changePass', [PegawaiController::class, 'adminChangePass']);    
 });
