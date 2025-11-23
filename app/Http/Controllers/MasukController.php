@@ -22,7 +22,8 @@ class MasukController extends Controller
             'password' => 'required'
         ]);
 
-        $user = Daftar_admin::where('username', $request->username)->first();
+        $user = Daftar_admin::where('username', $request->username)->first();        
+
         if (!$user) {
             return back()->with('fail', 'username tidak ada!');
         } else {

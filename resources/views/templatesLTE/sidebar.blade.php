@@ -127,39 +127,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/kepegawaian/pegawaiAsn"
-                                class="nav-link {{ Request::is('kepegawaian/pegawaiAsn*') ? 'active' : '' }}"
+                            <a href="/shift/pengaturan"
+                                class="nav-link {{ Request::is('shift/pengaturan*') ? 'active' : '' }}"
                                 style="font-size: .9rem">
                                 <i class="far fa-circle nav-icon ml-2" style="font-size: .7rem"></i>
-                                <p>Daftar ASN</p>
+                                <p>Pengaturan Shift</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/kepegawaian/nonAsn"
-                                class="nav-link {{ Request::is('kepegawaian/nonAsn*') ? 'active' : '' }}"
+                            <a href="/shift/absen"
+                                class="nav-link {{ Request::is('shift/absen*') ? 'active' : '' }}"
                                 style="font-size: .9rem">
                                 <i class="far fa-circle nav-icon ml-2" style="font-size: .7rem"></i>
-                                <p>Daftar Non-ASN</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="/kepegawaian/mutasiKeluar"
-                                class="nav-link {{ Request::is('kepegawaian/mutasiKeluar') ? 'active' : '' }}"
-                                style="font-size: .9rem">
-                                <i class="far fa-circle nav-icon ml-2" style="font-size: .7rem"></i>
-                                <p>Mutasi Keluar</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/kepegawaian/mutasiMasuk"
-                                class="nav-link {{ Request::is('kepegawaian/mutasiMasuk') ? 'active' : '' }}"
-                                style="font-size: .9rem">
-                                <i class="far fa-circle nav-icon ml-2" style="font-size: .7rem"></i>
-                                <p>Mutasi Masuk</p>
-                                @if($notifMutasi->count())
-                                <span class="badge badge-warning right">{{ $notifMutasi->count() }}</span>
-                                @endif
+                                <p>Absen Shift</p>
                             </a>
                         </li>
 

@@ -56,7 +56,6 @@ class PegawaiController extends Controller
         
         $db = $this->db;
         $pokjab = $db->table('kelompok_jabs')->where('kode_pd', $kode_pd)->get();       
-
         return view('kepegawaian.pegawaiAsn', [
             'pegawaiAsn' => $pegawaiAsn,
             'tahun' => $this->tahun,
@@ -200,7 +199,7 @@ class PegawaiController extends Controller
             'tpp' => strip_tags($request->tpp),
             'tmt_absen' => strip_tags($request->tmt_absen),
             'norut' => strip_tags($request->norut),
-            'status' => 'aktif',
+            'status' => strip_tags($request->shift),
         ];
 
         if ($request->file('foto_pegawai')) {
@@ -324,7 +323,7 @@ class PegawaiController extends Controller
         $resetpass = Daftar_admin::where('username', $asn->nip)->pluck('pertama')->first();
 
         $db = $this->db;
-        $pokjab = $db->table('kelompok_jabs')->where('kode_pd', $kode_pd)->get();
+        $pokjab = $db->table('kelompok_jabs')->where('kode_pd', $kode_pd)->get();        
 
         return view('kepegawaian.updatePegawai', [
             'asn' => $asn,

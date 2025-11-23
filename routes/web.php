@@ -202,4 +202,9 @@ Route::group(['middleware' => ['AdminCheck']], function () {
 
     // Admin change password
     Route::post('/admin/changePass', [PegawaiController::class, 'adminChangePass']);    
+
+    Route::get('/shift/pengaturan', [ShiftController::class, 'pengaturan']);
+
+    Route::get('/shift', [ShiftController::class, 'index']);
+    Route::post('/shift/update', [ShiftController::class, 'updateShift']);
 });

@@ -129,7 +129,7 @@
         });
     </script>
 
-    @stack('script')
+    @stack('scripts')
 </body>
 
 </html>

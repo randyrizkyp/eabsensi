@@ -263,7 +263,7 @@
 
 
 @endsection
-@push('script')
+@push('scripts')
 <script type="text/javascript">
     $.get("/absenPulang/ajaxBelumAbsen", {data:'oke'}).done(function(hasil){
         console.log(hasil);

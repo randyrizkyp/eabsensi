@@ -276,7 +276,7 @@
                                                         name="tmt_absen" autocomplete="off" required>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>                                        
                                     </div>
                                     <div class="form-row">
                                         <div class="col ">
@@ -337,7 +337,19 @@
 
                                             </div>
                                         </div>
-                                        <div class="col"></div>
+                                        <div class="col">
+                                            <div class="form-group row">
+                                                <label for="shift"
+                                                    class="col-sm-3 col-form-label text-right">Shift</label>
+                                                <div class="col-sm-9">
+                                                    <select class="custom-select" id="shift" name="shift">
+                                                        <option value="" selected disabled>--pilih--</option>
+                                                        <option value="aktif">Regular</option>                                                        
+                                                        <option value="shift">Shift</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
 
@@ -523,7 +535,7 @@
         </div>
     @endsection
 
-    @push('script')
+    @push('scripts')
         <script type="text/javascript" src="/js/jquery.mask.js"></script>
         <script>
             $('#daftarAsn').DataTable({

@@ -252,7 +252,7 @@
 
 
 @endsection
-@push('script')
+@push('scripts')
 <script type="text/javascript">
     $("#tglcari").datepicker({
              format: 'dd-mm-yyyy',

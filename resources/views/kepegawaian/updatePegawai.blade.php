@@ -289,7 +289,20 @@
 
         </div>
     </div>
-    <div class="col"></div>
+    <div class="col">
+        <div class="form-group row">
+            <label for="shift"
+                class="col-sm-3 col-form-label text-right">Shift</label>
+            <div class="col-sm-9">               
+                <select class="custom-select" id="shift" name="shift" required>
+                    <option value="" selected disabled>--pilih--</option>
+                    <option {{ $asn->status == 'aktif' ? 'selected' : '' }}>Regular</option>
+                    <option {{ $asn->status == 'Shift' ? 'selected' : '' }}>Shift</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
 </div>
 <script>
     $('.tpp').mask('000.000.000', {
